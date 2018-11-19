@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
 
+####   Automatic reverse DNS lookup & Edit EC2 Security Group rule (IP Address) to solve dynamic hostname problem  ####
+
+
+
+
 import socket, re, boto3
 
 hostname = 'android.googleapis.com' #host name setting (one value only)
