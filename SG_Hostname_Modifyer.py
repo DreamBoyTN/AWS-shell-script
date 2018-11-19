@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 import socket, re, boto3
 
 hostname = 'android.googleapis.com' #host name setting (one value only)
