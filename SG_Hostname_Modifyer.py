@@ -7,7 +7,7 @@
 
 import socket, re, boto3
 
-hostname = 'android.googleapis.com' #host name setting (one value only)
+hostname = 'android.googleapis.com' #host name setting
 SG_ID = ['sg-0232439a1f53ac918', 'sg-0e60612ecc4c4cd55'] #Security Group ID's (list)
 pattern = re.compile(r'\.'.join([r'\d{1,3}'] * 4))
 result = pattern.findall(str(socket.gethostbyname_ex(hostname)))
