@@ -1,0 +1,31 @@
+
+# -*- coding: utf-8 -*-
+
+
+ #### Function to Search CloudWatch Log by specific condition  ####
+
+
+
+import boto3
+import time
+
+
+def get_log_events():
+    client = boto3.client('logs')
+    resp = client.filter_log_events(
+        logGroupName='WebACL/ACL_F5_Web_Exploits_Rules/7fb8fa33-c93f-4f89-a024-07bf8d278efc',   #log group id
+        startTime=int((time.time() * 1000) - 900000),   # 15 minute interval
+        endTime = int(time.time() * 1000),
+        filterPattern='\"BLOCK\"',   # Search Pattern
+        limit=100  # The maximum number of items returned
+    )
+    with open('C:\CloudWatch.log', 'w+') as file:  # Write Log to your file (overwrite)
+        file.write(str(resp))
+
+
+if __name__ == '__main__':
+    get_log_events()
+
+
+
+
