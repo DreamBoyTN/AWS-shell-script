@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-####   Automatic reverse DNS lookup & Edit EC2 Security Group rule (IP Address) to solve dynamic hostname problem  ####
+####   Automatic reverse hostname & Edit EC2 Security Group rule (IP Address) to solve dynamic hostname problem  ####
 
 
 
