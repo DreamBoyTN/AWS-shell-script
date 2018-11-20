@@ -28,6 +28,7 @@ def SG_egress(IP, host):
                  'FromPort': 443,
                  'ToPort': 443}]
         )
+        return response
 
 
 def SG_egress_revoke(IP):
@@ -42,6 +43,7 @@ def SG_egress_revoke(IP):
                  'FromPort': 443,
                  'ToPort': 443}]
         )
+        return response
 
 
 client = boto3.client('ec2')
